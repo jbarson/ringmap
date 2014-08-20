@@ -128,7 +128,8 @@ galMap.init = function() {
     starImage.setAttribute('class','spike'+system.links.length);
     starImage.setAttribute('points',galMap.spikes(system.links.length));
     starImage.setAttribute('fill','#fff');
-    starImage.setAttribute('transform','translate(25,25)');
+    starImage.setAttribute('transform','translate(25,25) scale(1.5)');
+    //starImage.setAttribute('transform','scale(1.5)');
     svgCanvas.appendChild(starImage);
     systemDiv.appendChild(svgCanvas);
     //var starPic = document.createElement('img');
