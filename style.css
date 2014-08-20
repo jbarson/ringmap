@@ -105,7 +105,7 @@ h1, h2, h3, p, span, .text {
   color:white;
   position:relative;
   text-shadow: 1px 1px 0 black;
-  top:-50px;
+  top: 0px;
   font-size: 24px;
   -webkit-transition: all 0.1s ease-out;
        -moz-transition: all 0.1s ease-out;
