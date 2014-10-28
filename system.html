@@ -2,8 +2,44 @@
    ng-attr-transform="translate({{node.x +600}},{{node.y +600}})">
     <polygon class="{{'spike'+node.links.length}}"
              transform="scale(0.75)"
-             ng-attr-points="{{map.spikes(node.links.length)}}"
+             ng-attr-points="{{spikes(node.links.length)}}"
              ng-attr-fill="#fff">
     </polygon>
-    <text ng-attr-dx="{{-2.5*node.name.length}}" dy="25">{{node.name}}</text>
+    <!-- green only-->
+    <circle ng-if="!node.resources.brown && node.resources.green" 
+            fill="#73AF41" 
+            stroke="#000000" 
+            stroke-width="0.1" 
+            r="2"/>
+    <!-- brown only-->
+    <rect ng-if="node.resources.brown && !node.resources.green" 
+            x="-1.5" 
+            y="-1.5" 
+            fill="#CC3300" 
+            stroke="#000000" 
+            stroke-width="0.1" 
+            width="3" 
+            height="3"/>
+    <!-- green and brown -->
+    <g ng-if="node.resources.green && node.resources.brown">
+      <circle fill="#73AF41" 
+            cx="-2" 
+            stroke="#000000" 
+            stroke-width="0.1"  
+            r="2"/>
+      <rect x="2" 
+            y="-1.5" 
+            fill="#CC3300" 
+            stroke="#000000" 
+            stroke-width="0.1" 
+            width="3" 
+            height="3"/>  
+    </g>
+    <!-- yellow only-->
+    <polygon ng-show="node.resources.yellow" 
+            fill="#F5E600" 
+            stroke="#000000" 
+            stroke-width="0.1" 
+            points="-2,0 0,2.5 2,0 "/>
+    <text ng-attr-dx="{{-3*node.name.length}}" ng-class="{starText: node.resources.homeworld}" dy="18">{{node.name}}</text>
 </g>

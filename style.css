@@ -1,20 +1,13 @@
-@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+/*@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";*/
 .link {
   stroke: #cc99ff;
 }
 .hidden {opacity: 0;}
 
-/*@font-face {*/
-/*    font-family: 'bitstream_vera_sans_monoroman';*/
-/*    src: url('VeraMono-webfont.eot');*/
-/*    src: url('VeraMono-webfont.eot?#iefix') format('embedded-opentype'),*/
-/*         url('VeraMono-webfont.woff') format('woff'),*/
-/*         url('VeraMono-webfont.ttf') format('truetype'),*/
-/*         url('VeraMono-webfont.svg#bitstream_vera_sans_monoroman') format('svg');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
 
-/*}*/
 body {
   fill:white;
   /*height:800px;*/
@@ -40,20 +33,14 @@ textarea, input[type="text"] {
 .node>text, {
   pointer-events: none;
   fill: white;
+  text-shadow: 2px 2px 2px black;
 }
 text {
-
   font-family:helvetica,arial,sans-serif;
-  font-weight:bol;
-  font-size:1.0em;
-  fill:#fff;
-  fill-opacity:1;
-
-  stroke:#000000;
-  stroke-width:0.03em;
-  stroke-linecap:butt;
-  stroke-linejoin:miter;
-  stroke-opacity:0.5;
+  font-size:12px; 
+}
+.hovered>text {
+  font-weight: bold;
 }
 
 .jumpGate {
@@ -93,7 +80,14 @@ h1, h2, h3, p, span, .text {
 .link6 {stroke:#cc0033; color:#cc0033;}
 .link7 {stroke:#660033; color:#660033;}
 .linkUnk {stroke:#cccccc color:#cccccc;}
-
+.jumplink1 {background:#cc99ff; width:5px;}
+.jumplink2 {background:#3399ff; width:5px;}
+.jumplink3 {background:#33cc66; width:5px;}
+.jumplink4 {background:#ffff33; width:5px;}
+.jumplink5 {background:#cc6633; width:5px;}
+.jumplink6 {background:#cc0033; width:5px;}
+.jumplink7 {background:#660033; width:5px;}
+.jumplinkUnk {background:#cccccc; width:5px;}
 .ng-modal-dialog {background:black;}
 
 .starDiv {
@@ -104,13 +98,8 @@ h1, h2, h3, p, span, .text {
 .starText {
   color:white;
   position:relative;
-  text-shadow: 1px 1px 0 black;
-  top: 0px;
-  font-size: 24px;
-  -webkit-transition: all 0.1s ease-out;
-       -moz-transition: all 0.1s ease-out;
-         -o-transition: all 0.1s ease-out;
-            transition: all 0.1s ease-out;
+  font-size: 16px;
+  font-weight: bold;
 }
 .planetText {
   position: relative;
@@ -135,6 +124,7 @@ h1, h2, h3, p, span, .text {
   display: block;
   background: blue;
 }
+
 .alpha {
   background: blue;
   width: 5px;

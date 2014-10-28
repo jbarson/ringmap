@@ -7,17 +7,12 @@
   <link rel="stylesheet" href="bower_components/ngModal/dist/ng-modal.css" media="screen">
   <link rel="stylesheet" href="style.css">
 </head>
-  <body>
-    <!--<div class="form-signin" ng-controller="loginController">-->
-      <!--<h3 class="form-signin-heading" ng-if="currentUser">{{currentUser.email}}</h3>-->
-      <!--<input ng-show ="!currentUser" ng-model="newUser.email" type="email" class="form-control" placeholder="Email address" >-->
-      <!--<input ng-show ="!currentUser" ng-model="newUser.password" type="password" class="form-control" placeholder="Password">-->
-      <!--<button ng-show ="!currentUser" ng-click="login(newUser.email, newUser.password)" class="btn btn-lg btn-primary btn-block">Login</button>-->
-      <!--&lt;!&ndash; <button ng-click="register(newUser.email, newUser.password)" class="btn btn-lg btn-success btn-block">Register</button> &ndash;&gt;-->
-      <!--<button ng-show ="currentUser" ng-click="logout()" class="btn btn-danger btn-block">Logout</button>-->
-    <!--</div>-->
+  <body ng-cloak>
     <div class="container" ng-controller="mapController as map">
+
     <div class="legend">
+    <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">{{isCollapsed?"Show":"Hide"}} Menu</button>
+    <div collapse="isCollapsed">
       <h4>Link Legend</h4>
       <textarea name="Name" rows="8" cols="40" placeholder="enter JSON here" ng-model="jsonInput"></textarea>
       <br>
@@ -41,6 +36,7 @@
         <ul class="list-unstyled">
             <li ng-repeat="map in dbList"><button class="btn btn-default btn-xs" ng-click="displayDBEntry(map)">Display</button>{{map.name}}</li>
         </ul>
+        </div>
     </div>
     <tabset>
       <tab heading="2D map">
