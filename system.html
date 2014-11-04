@@ -1,7 +1,9 @@
 <g class="reset node"
    ng-attr-transform="translate({{node.x +600}},{{node.y +600}})">
+
+    <circle r="5" fill="black" stroke="white" stroke-width="0.5" ></circle>
     <polygon class="{{'spike'+node.links.length}}"
-             transform="scale(0.75)"
+             transform="scale(0.25)"
              ng-attr-points="{{spikes(node.links.length)}}"
              ng-attr-fill="#fff">
     </polygon>
@@ -10,7 +12,7 @@
             fill="#73AF41" 
             stroke="#000000" 
             stroke-width="0.1" 
-            r="2"/>
+            r="2"></circle>
     <!-- brown only-->
     <rect ng-if="node.resources.brown && !node.resources.green" 
             x="-1.5" 
@@ -19,27 +21,27 @@
             stroke="#000000" 
             stroke-width="0.1" 
             width="3" 
-            height="3"/>
+            height="3"></rect>
     <!-- green and brown -->
     <g ng-if="node.resources.green && node.resources.brown">
       <circle fill="#73AF41" 
             cx="-2" 
             stroke="#000000" 
             stroke-width="0.1"  
-            r="2"/>
+            r="2"></circle>
       <rect x="2" 
             y="-1.5" 
             fill="#CC3300" 
             stroke="#000000" 
             stroke-width="0.1" 
             width="3" 
-            height="3"/>  
+            height="3"></rect>
     </g>
     <!-- yellow only-->
     <polygon ng-show="node.resources.yellow" 
             fill="#F5E600" 
             stroke="#000000" 
             stroke-width="0.1" 
-            points="-2,0 0,2.5 2,0 "/>
-    <text ng-attr-dx="{{-3*node.name.length}}" ng-class="{starText: node.resources.homeworld}" dy="18">{{node.name}}</text>
+            points="-2,0 0,2.5 2,0 "></polygon>
+    <text text-anchor="middle" ng-class="{starText: node.resources.homeworld}" dy="18">{{node.name}}</text>
 </g>

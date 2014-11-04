@@ -37,7 +37,7 @@ textarea, input[type="text"] {
 }
 text {
   font-family:helvetica,arial,sans-serif;
-  font-size:12px; 
+  font-size:8px; 
 }
 .hovered>text {
   font-weight: bold;
@@ -98,7 +98,7 @@ h1, h2, h3, p, span, .text {
 .starText {
   color:white;
   position:relative;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
 }
 .planetText {
@@ -192,6 +192,6 @@ h1, h2, h3, p, span, .text {
             transition: all 0.1s ease-out;
 }
 .map {
-  height:1100px;
+  height:700px;
   width:1100px;
 }
